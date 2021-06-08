@@ -11,7 +11,7 @@
   },
   {
     "remote": "github",
-    "repository"  : "vendor_oneplus",
+    "repository"  : "vendor_oneplus_sm8150",
     "target_path" : "vendor/oneplus"
   }
 ]
