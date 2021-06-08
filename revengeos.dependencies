@@ -1,0 +1,17 @@
+[
+  {
+    "remote": "github",
+    "repository"  : "kernel_oneplus_sm8150",
+    "target_path" : "kernel/oneplus/sm8150"
+  },
+  {
+    "remote": "github",
+    "repository"  : "device_oneplus_common",
+    "target_path" : "device/oneplus/common"
+  },
+  {
+    "remote": "github",
+    "repository"  : "vendor_oneplus",
+    "target_path" : "vendor/oneplus"
+  }
+]
