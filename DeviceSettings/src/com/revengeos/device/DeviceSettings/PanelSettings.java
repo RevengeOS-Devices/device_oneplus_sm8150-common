@@ -32,7 +32,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
 
-import com.android.internal.util.revengeos.FileUtils;
+import com.android.internal.util.custom.FileUtils;
 
 public class PanelSettings extends PreferenceFragment implements RadioGroup.OnCheckedChangeListener {
     ViewPager viewPager;
