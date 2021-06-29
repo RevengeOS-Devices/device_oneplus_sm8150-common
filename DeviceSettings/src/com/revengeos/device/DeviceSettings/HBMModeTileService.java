@@ -57,7 +57,7 @@ public class HBMModeTileService extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        boolean enabled = com.yaap.device.DeviceSettings.HBMModeSwitch.isCurrentlyEnabled(this);
+        boolean enabled = com.revengeos.device.DeviceSettings.HBMModeSwitch.isCurrentlyEnabled(this);
         // NOTE: reverse logic, enabled reflects the state before press
         Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "0" : "5");
         if (!enabled) {
