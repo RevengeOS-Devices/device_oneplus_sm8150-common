@@ -63,11 +63,17 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
+        vendor/bin/hw/qcrild)
+            "${PATCHELF}" --add-needed libril_shim.so "${2}"
+            ;;
+        system/etc/nfcee_access.xml)
+            sed -i -e 's|xliff=\"urn:oasis:names:tc:xliff:document:1.2|android=\"http:\/\/schemas.android.com\/apk\/res\/android|' "${2}"
+            ;;
     esac
     case "${DEVICE}" in
         hotdog | hotdogb | hotdogg )
         case "${1}" in
-            vendor/lib/libgf_ud_hal.so | vendor/lib64/libgf_ud_hal.so )
+            vendor/lib64/libgf_ud_hal.so )
             sed -i "s|vendor.boot.verifiedbootstate|vendor.boot.fingerprintbstate|g" "${2}"
             ;;
             esac
